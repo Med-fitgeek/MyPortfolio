@@ -26,17 +26,17 @@ import { VscVscode, VscAzureDevops  } from "react-icons/vsc";
 
 const header = {
   // all the properties are optional - can be left empty or deleted
-  homepage: 'https://rjshkhr.github.io/cleanfolio',
+  homepage: '',
   title: 'NMN.',
 }
 
 const about = {
   // all the properties are optional - can be left empty or deleted
   name: 'Ndongo Medoune Ndiaye',
-  role: 'Ingénieur logiciel',
+  role: 'jeune ingénieur logiciel',
   description:
     'J’ai découvert la programmation un peu par curiosité... et j’y suis resté par passion. Depuis, je construis, j’apprends, je corrige des bugs (parfois les miens 😅) et je m’améliore chaque jour. J’ai une vraie affinité pour les univers typés comme Java, C# et TypeScript, avec une expérience solide sur des frameworks tels que Spring Boot, .NET et Angular. J’aime développer des projets qui ont du sens : plateforme de vote en ligne sécurisée, compilateur, API d’automatisation... Je prends plaisir à concevoir des solutions robustes, testées, utiles. J’apprends vite. Durant mes stages, j’ai manipulé des technos commeWPF & MVVM ou Azure DevOps, en autonomie complète. J’aime comprendre en profondeur, aller au bout des choses, sans jamais perdre le goût d’apprendre. Aujourd’hui encore, je ressens une petite joie chaque fois que mon code compile du premier coup... (Bon, pas toujours hein 😉).',
-  resume: 'https://example.com',
+  resume: 'https://cvdesignr.com/p/b4y5VZEM9Yg3oxn',
   social: {
     linkedin: 'https://linkedin.com/in/nmndiaye',
     github: 'https://github.com/Med-fitgeek',
