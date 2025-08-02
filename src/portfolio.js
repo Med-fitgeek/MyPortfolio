@@ -50,41 +50,45 @@ const projects = [
     name: 'Application de vote en ligne',
     description:
       'VoteSphere est une plateforme web moderne de vote électronique permettant à un administrateur de créer des élections, inviter des votants via des tokens uniques, et consulter les résultats en toute sécurité.',
+    image : '/assets/img/evote.png',
     stack: ['Spring Boot', 'Angular', 'OAUTH2', 'PostgreSQL'],
     sourceCode: 'https://github.com/Med-fitgeek/online-voting-app',
     livePreview: 'https://github.com/Med-fitgeek/online-voting-app',
   },
   {
-    name: 'Application de chat a temps réel',
-    description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['.NET', 'Angular', 'SignalR'],
-    sourceCode: 'https://github.com/Med-fitgeek/real-time-chat-app',
-    livePreview: 'https://github.comMed-fitgeek/real-time-chat-app',
-  },
-  {
-    name: 'Application de quiz sur le theme de la formule 1',
+    name: 'Application de quiz sur le theme de la F1',
     description:
       'Une application web interactive permettant aux passionnés de Formule 1 de tester leurs connaissances à travers un quiz dynamique et ludique.',
+    image : '/assets/img/formule1.png',
     stack: ['Flask', 'Vue.js', 'PostgreSQL'],
     sourceCode: 'https://github.com/Med-fitgeek/formula1-quiz-app',
     livePreview: 'https://github.comMed-fitgeekformula1-quiz-app',
   },
   {
-    name: 'Application de gestion de ferme',
-    description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com/Med-fitgeek',
-    livePreview: 'https://github.com/Med-fitgeek',
-  },
-  {
     name: 'Interpreteur de Langage',
     description:
       'Fitgeek Compilator est un projet pédagogique de construction d’un interpréteur et pretty-printer pour un langage simplifié. Il utilise ANTLR4 pour générer le parseur et le lexer, construit un AST, puis interprète les expressions du langage.',
+    image : '/assets/img/interpreter.png',
     stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com/Med-fitgeek',
+    sourceCode: 'https://github.com/Med-fitgeek/My_language_compilator',
+  },
+  {
+    name: 'Application de gestion de ferme',
+    description:
+      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
+    image : '/assets/img/ferme.png',
+    stack: ['SASS', 'TypeScript', 'React'],
+    sourceCode: 'https://github.com/Med-fitgeek/livestock',
     livePreview: 'https://github.com/Med-fitgeek',
+  },
+  {
+    name: 'Application de chat a temps réel',
+    description:
+      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
+    image : '/assets/img/chatapp.png',
+    stack: ['.NET', 'Angular', 'SignalR'],
+    sourceCode: 'https://github.com/Med-fitgeek/real-time-chat-app',
+    livePreview: 'https://github.comMed-fitgeek/real-time-chat-app',
   },
 ]
 
