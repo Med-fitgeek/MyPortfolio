@@ -1,0 +1,122 @@
+<section id="experience" class="section">
+  <div class="grid-bg"></div>
+
+  <div class="container">
+
+    <!-- En-tête -->
+    <p class="s-label">Expérience</p>
+    <h2 class="s-title">Parcours professionnel</h2>
+
+    <div class="xp-layout">
+
+      <!-- ══ Sélecteur gauche ══ -->
+      <div class="xp-tabs">
+        @for (xp of config.experience; track xp.company; let i = $index) {
+          <button
+            class="xp-tab"
+            [class.active]="active === i"
+            (click)="setActive(i)"
+            [style.--accent-color]="xp.color">
+            <span class="tab-abbr">{{ xp.logo }}</span>
+            <span class="tab-info">
+              <span class="tab-company">{{ xp.company }}</span>
+              <span class="tab-date">{{ xp.dateRange }}</span>
+            </span>
+            <span class="tab-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </span>
+          </button>
+        }
+
+        <!-- Ligne verticale timeline -->
+        <div class="timeline-rail"></div>
+      </div>
+
+      <!-- ══ Panneau détail ══ -->
+      @for (xp of config.experience; track xp.company; let i = $index) {
+        @if (active === i) {
+          <div class="xp-panel card" [style.--accent-color]="xp.color">
+
+            <!-- Header -->
+            <div class="panel-header">
+              <div class="panel-logo" [style.color]="xp.color"
+                   [style.border-color]="xp.color + '33'">
+                {{ xp.logo }}
+              </div>
+              <div class="panel-meta">
+                <h3 class="panel-company">{{ xp.company }}</h3>
+                <p class="panel-title">{{ xp.title }}</p>
+                <div class="panel-tags">
+                  <span class="meta-chip">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2"/>
+                      <line x1="16" y1="2" x2="16" y2="6"/>
+                      <line x1="8"  y1="2" x2="8"  y2="6"/>
+                      <line x1="3"  y1="10" x2="21" y2="10"/>
+                    </svg>
+                    {{ xp.dateRange }}
+                  </span>
+                  <span class="meta-chip">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                      <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/>
+                      <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    {{ xp.location }}
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Séparateur accent -->
+            <div class="panel-divider" [style.background]="xp.color"></div>
+
+            <!-- Bullets -->
+            <ul class="panel-bullets">
+              @for (bullet of xp.bullets; track bullet) {
+                <li class="bullet-item">
+                  <span class="bullet-dot" [style.background]="xp.color"></span>
+                  <span class="bullet-text">{{ bullet }}</span>
+                </li>
+              }
+            </ul>
+
+          </div>
+        }
+      }
+
+    </div>
+
+    <!-- ══ Ligne du temps mobile ══ -->
+    <div class="timeline-mobile">
+      @for (xp of config.experience; track xp.company; let i = $index) {
+        <div class="tm-item">
+          <div class="tm-dot" [style.background]="xp.color"></div>
+          <div class="tm-line"></div>
+          <div class="tm-content card" [style.--accent-color]="xp.color">
+            <div class="tm-header">
+              <div>
+                <h3 class="tm-company">{{ xp.company }}</h3>
+                <p class="tm-title">{{ xp.title }}</p>
+              </div>
+              <span class="tm-date">{{ xp.dateRange }}</span>
+            </div>
+            <ul class="panel-bullets">
+              @for (bullet of xp.bullets; track bullet) {
+                <li class="bullet-item">
+                  <span class="bullet-dot" [style.background]="xp.color"></span>
+                  <span class="bullet-text">{{ bullet }}</span>
+                </li>
+              }
+            </ul>
+          </div>
+        </div>
+      }
+    </div>
+
+  </div>
+</section>
