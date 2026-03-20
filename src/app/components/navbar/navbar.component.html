@@ -1,0 +1,45 @@
+<header [class.scrolled]="scrolled()">
+  <nav class="container nav-inner">
+
+    <!-- Logo -->
+    <a href="#hero" class="logo">
+      <span class="bracket">&lt;</span>{{ config.initials }}<span class="bracket">/&gt;</span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="nav-links">
+      <li><a href="#about"      (click)="close()">À propos</a></li>
+      <li><a href="#experience" (click)="close()">Expérience</a></li>
+      <li><a href="#projects"   (click)="close()">Projets</a></li>
+      <li><a href="#contact"    (click)="close()">Contact</a></li>
+    </ul>
+
+    <!-- CV button -->
+    <a class="cv-btn" href="assets/cv.pdf" target="_blank" rel="noopener">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      Télécharger CV
+    </a>
+
+    <!-- Burger -->
+    <button class="burger" [class.open]="open()" (click)="toggle()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="drawer" [class.open]="open()">
+    <ul>
+      <li><a href="#about"      (click)="close()">À propos</a></li>
+      <li><a href="#experience" (click)="close()">Expérience</a></li>
+      <li><a href="#projects"   (click)="close()">Projets</a></li>
+      <li><a href="#contact"    (click)="close()">Contact</a></li>
+      <li><a href="assets/cv.pdf" target="_blank" class="drawer-cv">Télécharger le CV</a></li>
+    </ul>
+  </div>
+</header>
