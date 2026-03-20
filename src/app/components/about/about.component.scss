@@ -1,0 +1,253 @@
+/* ══ About section ══ */
+
+/* ── Bio block ── */
+.about-top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem;
+  align-items: start;
+  margin-bottom: 5rem;
+}
+
+.bio-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.bio-text {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--txt-2);
+  max-width: 600px;
+}
+
+.bio-meta {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  font-family: var(--font-m);
+  font-size: .78rem;
+  color: var(--txt-2);
+
+  svg { color: var(--accent); flex-shrink: 0; }
+}
+
+.meta-available {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.dot-green {
+  width: 7px; height: 7px;
+  background: var(--green);
+  border-radius: 50%;
+  animation: pulseRing 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+/* ── Avatar card ── */
+.avatar-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatar-card {
+  position: relative;
+  z-index: 1;
+  width: 200px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-h);
+  border-radius: var(--rl);
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+}
+
+.avatar-initials {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: var(--accent-tint);
+  border: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-m);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent-lt);
+  margin-bottom: .25rem;
+}
+
+.avatar-role {
+  font-size: .88rem;
+  font-weight: 700;
+  color: var(--txt-1);
+}
+
+.avatar-stack {
+  font-family: var(--font-m);
+  font-size: .65rem;
+  color: var(--accent);
+  letter-spacing: .06em;
+}
+
+.avatar-school {
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  font-family: var(--font-m);
+  font-size: .68rem;
+  color: var(--txt-3);
+  margin-top: .25rem;
+
+  svg { color: var(--txt-3); }
+}
+
+.avatar-glow {
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(circle, var(--accent-glow), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(20px);
+}
+
+/* ── Skills ── */
+.skills-section {
+  margin-bottom: 5rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1rem;
+}
+
+.skill-cat {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cat-title {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  font-size: .88rem;
+  font-weight: 700;
+  color: var(--txt-1);
+  font-family: var(--font-m);
+}
+
+.cat-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+}
+
+/* ── Formation ── */
+.edu-section { /* no extra margin needed */ }
+
+.edu-card {
+  display: flex;
+  gap: 1.75rem;
+  align-items: flex-start;
+}
+
+.edu-logo {
+  width: 52px; height: 52px;
+  background: var(--accent-tint);
+  border: 1px solid var(--border-h);
+  border-radius: var(--r);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-m);
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--accent-lt);
+  flex-shrink: 0;
+}
+
+.edu-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+}
+
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.edu-school {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--txt-1);
+  margin-bottom: .2rem;
+}
+
+.edu-degree {
+  font-size: .9rem;
+  color: var(--txt-2);
+}
+
+.edu-date {
+  font-family: var(--font-m);
+  font-size: .72rem;
+  color: var(--accent);
+  background: var(--accent-tint);
+  border: 1px solid rgba(59,130,246,.2);
+  padding: .2rem .65rem;
+  border-radius: 100px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.edu-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+}
+
+.toeic {
+  background: rgba(16,185,129,.08);
+  border-color: rgba(16,185,129,.22) !important;
+  color: var(--green) !important;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .about-top {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .avatar-wrap {
+    margin: 0 auto;
+  }
+
+  .edu-card {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

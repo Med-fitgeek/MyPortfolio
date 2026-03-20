@@ -1,0 +1,107 @@
+<section id="about" class="section">
+  <div class="grid-bg"></div>
+
+  <div class="container">
+
+    <!-- ══ En-tête ══ -->
+    <p class="s-label">À propos</p>
+    <h2 class="s-title">Qui suis-je ?</h2>
+
+    <!-- ══ Bio + portrait ══ -->
+    <div class="about-top">
+
+      <div class="bio-block">
+        <p class="bio-text">Ajouter bio</p>
+
+        <div class="bio-meta">
+          <div class="meta-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            {{ config.location }}
+          </div>
+          <div class="meta-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <rect x="2" y="7" width="20" height="14" rx="2"/>
+              <path d="M16 7V5a2 2 0 0 0-4 0v2M8 7V5a2 2 0 0 0-4 0v2"/>
+            </svg>
+            {{ config.education.school }} · {{ config.education.dateRange }}
+          </div>
+          <div class="meta-item meta-available">
+            <span class="dot-green"></span>
+            {{ config.availableText }}
+          </div>
+        </div>
+      </div>
+
+      <!-- Avatar stylisé -->
+      <div class="avatar-wrap">
+        <div class="avatar-card">
+          <div class="avatar-initials">{{ config.initials }}</div>
+          <div class="avatar-role">{{ config.title }}</div>
+          <div class="avatar-stack">Ajouter la stack</div>
+          <div class="avatar-school">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+            {{ config.education.school }}
+          </div>
+        </div>
+        <div class="avatar-glow"></div>
+      </div>
+
+    </div>
+
+    <!-- ══ Skills par catégorie ══ -->
+    <div class="skills-section">
+      <p class="s-label">Compétences</p>
+
+      <div class="skills-grid">
+        @for (cat of config.skills; track cat.category) {
+          <div class="skill-cat card">
+            <h3 class="cat-title">
+              <span class="cat-icon">{{ getCatIcon(cat.category) }}</span>
+              {{ cat.category }}
+            </h3>
+            <div class="tags-wrap">
+              @for (item of cat.items; track item) {
+                <span class="tag">{{ item }}</span>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- ══ Formation ══ -->
+    <div class="edu-section">
+      <p class="s-label">Formation</p>
+
+      <div class="edu-card card">
+        <div class="edu-left">
+          <div class="edu-logo">ESIEE</div>
+        </div>
+        <div class="edu-right">
+          <div class="edu-header">
+            <div>
+              <h3 class="edu-school">{{ config.education.school }}</h3>
+              <p class="edu-degree">{{ config.education.degree }}</p>
+            </div>
+            <span class="edu-date">{{ config.education.dateRange }}</span>
+          </div>
+          <div class="edu-details">
+            <span class="tag">{{ config.education.specialization }}</span>
+            <span class="tag">{{ config.education.location }}</span>
+            <span class="tag toeic">{{ config.education.toeic }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
