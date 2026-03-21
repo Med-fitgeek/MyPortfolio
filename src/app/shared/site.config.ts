@@ -3,6 +3,7 @@
 export const siteConfig = {
   name: 'Ndongo Medoune Ndiaye',
   title: 'Backend Engineer',
+  initials: 'NMN',
   subtitle: 'Java · Spring Boot · Cloud',
   tagline: 'Je conçois des systèmes backend robustes, scalables et prêts pour la production.',
   description:
@@ -10,7 +11,7 @@ export const siteConfig = {
 
   location: 'Champs-Sur-Marne, France',
   available: true,
-  availableText: 'Disponible dès juillet 2025',
+  availableText: 'Disponible dès à présent pour une collaboration en CDI',
 
   social: {
     email: 'ndongo.m.ndiaye@gmail.com',

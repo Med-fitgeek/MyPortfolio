@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Fond sombre arrondi -->
+  <rect width="32" height="32" rx="7" fill="#060912"/>
+
+  <!-- Halo bleu centré -->
+  <circle cx="16" cy="15" r="11" fill="#3b82f6" opacity="0.15"/>
+
+  <!-- < N /> en monospace condensé -->
+  <text
+    x="16" y="20"
+    text-anchor="middle"
+    font-family="'Courier New', Courier, monospace"
+    font-size="13"
+    font-weight="700"
+    letter-spacing="-0.5"
+    fill="#e4ecfa">
+    <tspan fill="#3b82f6">&lt;</tspan>N<tspan fill="#3b82f6">/&gt;</tspan>
+  </text>
+
+  <!-- Barre accent bleue en bas du texte -->
+  <rect x="9" y="23" width="14" height="2" rx="1" fill="#3b82f6"/>
+</svg>
