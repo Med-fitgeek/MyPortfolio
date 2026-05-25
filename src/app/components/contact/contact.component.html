@@ -227,7 +227,7 @@
     <p>
       Conçu &amp; développé par
       <span class="footer-name">{{ config.name }}</span>
-      · {{ config.education.school }} {{ config.education.dateRange }}
+      · {{ config.education.at(0)?.school }} {{ config.education.at(0)?.dateRange }}
     </p>
     <p class="footer-stack">Built with Angular 18 · Standalone components</p>
   </footer>

@@ -28,7 +28,7 @@
               <rect x="2" y="7" width="20" height="14" rx="2"/>
               <path d="M16 7V5a2 2 0 0 0-4 0v2M8 7V5a2 2 0 0 0-4 0v2"/>
             </svg>
-            {{ config.education.school }} · {{ config.education.dateRange }}
+            {{ config.education.at(0)?.school }} · {{ config.education.at(0)?.dateRange }}
           </div>
           <div class="meta-item meta-available">
             <span class="dot-green"></span>
@@ -49,7 +49,7 @@
               <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
               <path d="M6 12v5c3 3 9 3 12 0v-5"/>
             </svg>
-            {{ config.education.school }}
+            {{ config.education.at(0)?.school }}
           </div>
         </div>
         <div class="avatar-glow"></div>
@@ -82,26 +82,28 @@
     <div class="edu-section">
       <p class="s-label">Formation</p>
 
-      <div class="edu-card card">
-        <div class="edu-left">
-          <div class="edu-logo">ESIEE</div>
-        </div>
-        <div class="edu-right">
-          <div class="edu-header">
-            <div>
-              <h3 class="edu-school">{{ config.education.school }}</h3>
-              <p class="edu-degree">{{ config.education.degree }}</p>
+      <div class="edu-list">
+        @for (edu of config.education; track edu.school) {
+          <div class="edu-card card">
+            <div class="edu-logo">{{ edu.abbr }}</div>
+            <div class="edu-right">
+              <div class="edu-header">
+                <div>
+                  <h3 class="edu-school">{{ edu.school }}</h3>
+                  <p class="edu-degree">{{ edu.degree }}</p>
+                </div>
+                <span class="edu-date">{{ edu.dateRange }}</span>
+              </div>
+              <div class="edu-details">
+                <span class="tag">{{ edu.specialization }}</span>
+                <span class="tag">{{ edu.location }}</span>
+                
+              </div>
             </div>
-            <span class="edu-date">{{ config.education.dateRange }}</span>
           </div>
-          <div class="edu-details">
-            <span class="tag">{{ config.education.specialization }}</span>
-            <span class="tag">{{ config.education.location }}</span>
-            <span class="tag toeic">{{ config.education.toeic }}</span>
-          </div>
-        </div>
+        }
       </div>
-    </div>
+</div>
 
   </div>
 </section>

@@ -22,16 +22,16 @@ export const siteConfig = {
   },
 
   skills: [
-    { category: 'Backend', items: ['Java 11/21', 'Spring Boot', 'Spring Security', 'REST API', 'JPA/Hibernate', 'J2EE'] },
-    { category: 'Architecture', items: ['Clean Architecture', 'Microservices', 'SOLID', 'Design Patterns', 'API Gateway', 'RabbitMQ'] },
-    { category: 'Base de données', items: ['PostgreSQL', 'SQL avancé', 'Indexation', 'Redis'] },
-    { category: 'DevOps & Cloud', items: ['Docker', 'CI/CD', 'GitHub Actions', 'Azure DevOps', 'SonarQube', 'Railway'] },
-    { category: 'Frontend', items: ['Angular', 'TypeScript', 'C# / .NET'] },
+    { category: 'Backend', items: ['Java 8+', 'Spring Boot', 'Spring Security', 'SPring Batch', 'JPA/Hibernate', 'J2EE', 'jUnit', 'Mockito'] },
+    { category: 'Architecture', items: ['Microservices', 'APIs REST', 'Clean Architecture', 'SOLID', 'TDD', 'Design Patterns'] },
+    { category: 'Data', items: ['SQL Avancé', 'PostgreSQL', 'SQL Server', 'MySQL', 'Redis'] },
+    { category: 'DevOps & Cloud', items: ['Docker', 'Kubernetes', 'AWS', 'CI/CD', 'GitHub Actions', 'SonarQube'] },
+    { category: 'Frontend', items: ['Angular', 'TypeScript', 'HTML', 'CSS'] },
   ],
 
   experience: [
     {
-      company: 'SLB (Schlumberger)',
+      company: 'SLB ',
       logo: 'SLB',
       title: 'Ingénieur Logiciel — Stage Fin d\'Études',
       dateRange: 'Fév 2025 — Juil 2025',
@@ -39,24 +39,27 @@ export const siteConfig = {
       type: 'Stage',
       color: '#3b82f6',
       bullets: [
-        'Conçu une API d\'orchestration pour workflows métiers critiques (.NET / Azure) déployée dans +40 pays',
-        'Structuré l\'architecture via Design Patterns (Facade, Factory) — -40% de duplication de code',
-        'Automatisé la qualité via tests unitaires & fonctionnels intégrés au pipeline CI/CD Azure DevOps',
-        'Travaillé dans un environnement industriel avec exigences élevées de fiabilité et de sécurité',
+        'Conception et développement d\'une API d\'automatisation de tests fonctionnels (.NET/MS Test) pour MAC, logiciel critique déployé dans 26+ pays',
+        'Définition des spécifications techniques et architecture modulaire basée sur le Facade Pattern',
+        'Développement de mécanismes synchronisés avec des simulateurs et outils métier',
+        'Couverture de tests portée de 20 % à 85 % ; refactorisation réduisant la duplication de code de 40 %',
+        'Écriture de tests unitaires (JUnit 5 / Mockito) garantissant la fiabilité des fonctionnalités livrées',
+        'Participation aux sprints Agile (Scrum) et aux pratiques d\'intégration continue'
       ],
     },
     {
-      company: 'Ministère de la Santé du Sénégal',
-      logo: 'MSS',
+      company: 'Orange',
+      logo: 'Or',
       title: 'Ingénieur Backend Java — Stage',
       dateRange: 'Avr 2024 — Août 2024',
       location: 'Dakar, Sénégal',
       type: 'Stage',
       color: '#10b981',
       bullets: [
-        'Développé des modules backend Spring Boot pour une plateforme nationale (50 000+ utilisateurs actifs)',
-        'Optimisé PostgreSQL (indexation, Hibernate) → +30% de performance sur les requêtes critiques',
-        'Conçu un système de stockage multimédia hiérarchisé réduisant le temps d\'accès de 40%',
+        'Développement de services backend (Spring Boot / Spring Security) pour la plateforme Orange Money : 8M transactions/mois',
+        'Conception d\'APIs REST sécurisées avec authentification OAuth/JWT',
+        'Intégration d\'un système de notifications temps réel avec WebSockets ; 0 régression en production sur 12 semaines',
+        'Écriture de tests unitaires (JUnit 5 / Mockito) garantissant la fiabilité des fonctionnalités livrées',
         'Participé aux cycles Agile (Scrum) et à l\'intégration continue avec l\'équipe produit',
       ],
     },
@@ -64,7 +67,7 @@ export const siteConfig = {
 
   projects: [
     {
-      name: 'B-Ready',
+      name: 'Memorix',
       tagline: 'Plateforme SaaS de révision intelligente',
       description:
         'Plateforme de génération de quiz intelligents à partir de contenus (cours, notes, PDF). Backend Spring Boot sécurisé (JWT) avec traitements asynchrones, monitoring SonarQube et déploiement Railway via GitHub Actions.',
@@ -74,7 +77,7 @@ export const siteConfig = {
       skills: ['Java', 'Spring Boot', 'JWT', 'Angular', 'PostgreSQL', 'GitHub Actions', 'SonarQube'],
     },
     {
-      name: 'Votify',
+      name: 'Votely',
       tagline: 'Système de vote électronique sécurisé',
       description:
         'API Spring Boot garantissant intégrité transactionnelle et cohérence des votes. Authentification via Keycloak (OAuth2/JWT), interface Angular et pipeline CI/CD complet.',
@@ -125,12 +128,32 @@ export const siteConfig = {
     },
   ],
 
-  education: {
-    school: 'ESIEE Paris',
-    degree: 'Diplôme d\'Ingénieur Informatique',
-    dateRange: '2020 — 2025',
-    location: 'Noisy-le-Grand, France',
-    specialization: 'Génie Logiciel & Systèmes d\'Information',
-    toeic: 'TOEIC 835 — Niveau professionnel',
-  },
+  education: [
+    {
+      school: 'ESIEE Paris',
+      abbr: 'ESIEE',
+      degree: 'Diplôme d\'Ingénieur Informatique',
+      dateRange: '2022 — 2025',
+      location: 'Noisy-le-Grand, France',
+      specialization: 'Génie Logiciel & Systèmes d\'Information',
+      toeic: 'TOEIC 835 — Niveau professionnel',
+    },
+    {
+      school: 'Università Di Roma \'Tor Vergata\'',
+      abbr: 'Uni Roma',
+      degree: 'Semestre d\'échange',
+      dateRange: 'Automne 2023',
+      location: 'Rome, Italie',
+      specialization: 'Cours en anglais : Advanced Algorithms, Distributed Systems, Cloud Computing',
+    },
+    {
+      school: 'Excellence Universitaire Africaine',
+      abbr: 'EUA',
+      degree: 'Classes Préparatoires aux Grandes Ecoles',
+      dateRange: '2019 - 2020',
+      location: 'Dakar, Sénégal',
+      specialization: 'Math, Physique, Informatique',
+    }
+  ]
+  
 };
